@@ -1,7 +1,18 @@
-import React from "react";
+import React, { Fragment } from "react";
+import { Switch, Route } from "react-router-dom";
+
+import Home from "./pages/Home/Home";
 
 function App() {
-  return <div className="App"></div>;
+  return (
+    <Fragment>
+      <Switch>
+        <Route path="/">
+          <Home />
+        </Route>
+      </Switch>
+    </Fragment>
+  );
 }
 
 export default App;
