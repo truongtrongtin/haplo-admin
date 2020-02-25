@@ -1,0 +1,89 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 332px;
+  border-radius: 12px;
+  background-color: #fff;
+  padding: 16px;
+  height: 876px;
+  overflow: auto;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.headerText {
+  font-weight: 600;
+  text-transform: uppercase;
+  line-height: 24px;
+  height: 24px;
+}
+
+.filterIcon {
+  height: 24px;
+  width: 24px;
+}
+
+.filterIcon .hoverIcon {
+  display: none;
+}
+
+.filterIcon:hover .hoverIcon {
+  display: block;
+}
+
+.filterIcon:hover .normalIcon {
+  display: none;
+}
+
+.recentItem {
+  display: flex;
+  padding: 18px 0;
+}
+
+.amenitiesIcon {
+  height: 32px;
+  width: 32px;
+}
+
+.recentContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1;
+  margin-left: 12px;
+}
+
+.activityName {
+  height: 15px;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.user {
+  display: flex;
+  align-items: center;
+}
+
+.userIcon {
+  height: 14px;
+  width: 14px;
+}
+
+.user span {
+  color: #75859d;
+  font-size: 11px;
+  font-weight: 500;
+  line-height: 10px;
+}
+
+.username {
+  margin-left: 4px;
+}
+
+.time {
+  margin-left: auto;
+}

@@ -1,0 +1,115 @@
+.wrapper {
+  display: flex;
+}
+
+.home {
+  padding: 12px 24px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.welcome {
+  display: flex;
+  justify-content: space-between;
+}
+
+h1.welcomeText {
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 1.27;
+  margin: 0;
+  color: #000;
+  height: 28px;
+}
+
+.welcomeText strong {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.date {
+  font-weight: 500;
+  height: 15px;
+}
+
+.breadcrumb {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-top: 14px;
+}
+
+.company {
+  height: 15px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.breadcrumb button {
+  vertical-align: middle;
+}
+
+.breadcrumb button:not(:first-child) {
+  margin-left: 12px;
+}
+
+.iconButton:hover .normalIcon {
+  display: none;
+}
+
+.iconButton:hover .hoverIcon {
+  display: block;
+}
+
+.hoverIcon {
+  display: none;
+}
+
+table {
+  border-collapse: collapse;
+  background-color: #fff;
+  box-shadow: 0 8px 12px 0 rgba(43, 47, 57, 0.04);
+  border-radius: 12px;
+  margin-top: 16px;
+  overflow: hidden;
+}
+
+thead th {
+  background-color: #f1f8ff;
+  text-transform: uppercase;
+  height: 36px;
+  vertical-align: middle;
+  text-align: left;
+  padding: 0 7.5px;
+  font-size: 10px;
+  font-weight: 600;
+  background-color: #f1f8ff;
+  color: #9095ae;
+}
+
+thead th:not(:first-child):not(:last-child) {
+  border-right: 1px solid #dde4ef;
+}
+
+tbody tr:not(:last-child) {
+  border-bottom: 1px solid #ebeef3;
+}
+
+tbody td {
+  height: 40px;
+  vertical-align: middle;
+  padding: 0 7.5px;
+  line-height: 1.33;
+}
+
+.pages {
+  display: flex;
+  margin-top: 17px;
+  margin-left: auto;
+  align-items: center;
+}
+
+.pagesText {
+  margin-right: 8px;
+}

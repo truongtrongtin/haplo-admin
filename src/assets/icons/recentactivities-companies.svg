@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="32" viewBox="0 0 32 32">
+    <defs>
+        <rect id="prefix__a" width="32" height="32" x="0" y="0" rx="16"/>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <mask id="prefix__b" fill="#fff">
+            <use xlink:href="#prefix__a"/>
+        </mask>
+        <use fill="#EDF1FF" xlink:href="#prefix__a"/>
+        <g stroke-linecap="round" stroke-linejoin="round" mask="url(#prefix__b)">
+            <g stroke="#276EF1" stroke-width="1.2">
+                <path d="M1.8 9h-.6C.537 9 0 8.424 0 7.714V1.286C0 .576.537 0 1.2 0h9.6c.663 0 1.2.576 1.2 1.286v6.428C12 8.424 11.463 9 10.8 9h-.6" transform="translate(10 11)"/>
+                <path d="M6 7L9 11 3 11z" transform="translate(10 11)"/>
+            </g>
+        </g>
+    </g>
+</svg>

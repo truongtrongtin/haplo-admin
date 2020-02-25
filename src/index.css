@@ -1,3 +1,41 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  font-family: Inter;
+  font-size: 12px;
+  color: #181c2d;
+  line-height: normal;
+}
+
+button {
+  background-color: Transparent;
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+  outline: none;
+  display: inline-flex;
+}
+
 body {
+  background-color: #eceef4;
   padding: 12px;
+}
+
+.icon:hover svg:firstchild {
+
+}
+
+.icon:hover svg:first-child {
+  display: none;
+}
+
+.icon:hover svg:last-child {
+  display: block;
+}
+
+.icon svg:last-child {
+  display: none;
 }
