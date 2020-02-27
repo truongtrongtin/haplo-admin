@@ -14,22 +14,26 @@ aside.sidebar {
   justify-content: center;
 }
 
-.logo a {
+.logo > a {
   width: 40px;
   height: 40px;
 }
 
-ul {
+ul.list {
   padding: 7.5px 0;
   border-bottom: 1px solid rgba(255, 255, 255, .2);
 }
 
-a.active {
+ul.list > li {
+  position: relative;
+}
+
+.active {
   position: relative;
   overflow: hidden;
 }
 
-a.active::before {
+.active::before {
   content: '';
   height: 40px;
   width: 8px;
@@ -41,19 +45,20 @@ a.active::before {
   left: 0;
 }
 
-a.icon {
+.icon {
   display: flex;
   justify-content: center;
   padding: 16px 0;
+  width: 100%;
 }
 
-a.active .normalIcon,
-a.icon:hover .normalIcon,
-a.icon:not(.active) .hoverIcon {
+.active .normalIcon,
+.icon:hover .normalIcon,
+.icon:not(.active) .hoverIcon {
   display: none;
 }
 
-a.icon:hover .hoverIcon {
+.icon:hover .hoverIcon {
   display: block;
 }
 
@@ -70,7 +75,7 @@ a.icon:hover .hoverIcon {
   padding-top: 8px;
 }
 
-.avatar a {
+.avatar > a {
   width: 32px;
   height: 32px
 }

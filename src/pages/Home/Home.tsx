@@ -1,12 +1,12 @@
 import React from "react";
 
 import css from "./Home.module.css";
-import WelcomeText from "../../components/WelcomeText/WelcomeText";
-import CurrentDate from "../../components/CurrentDate/CurrentDate";
-import SectionName from "../../components/SectionName/SectionName";
-import TableAction from "../../components/TableAction/TableAction";
-import Table from "../../components/Table/Table";
-import Pagination from "../../components/Pagination/Pagination";
+import WelcomeText from "../../components/WelcomeText";
+import CurrentDate from "../../components/CurrentDate";
+import SectionName from "../../components/SectionName";
+import TableAction from "../../components/TableAction";
+import Table from "../../components/Table";
+import Pagination from "../../components/Pagination";
 
 function Home() {
   return (

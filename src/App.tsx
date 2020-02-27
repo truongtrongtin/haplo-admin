@@ -1,9 +1,10 @@
 import React from "react";
 import { Switch, Route } from "react-router-dom";
 
-import Sidebar from "./components/SideBar/SideBar";
-import Home from "./pages/Home/Home";
-import RecentActivity from "./components/RecentActivity/RecentActivity";
+import Sidebar from "./components/SideBar";
+import Home from "./pages/Home";
+import RecentActivity from "./components/RecentActivity";
+import Backdrop from "./components/Backdrop";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         </Route>
       </Switch>
       <RecentActivity />
+      <Backdrop open={false} />
     </div>
   );
 }

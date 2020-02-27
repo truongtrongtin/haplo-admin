@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, Suspense } from "react";
 import { Link } from "react-router-dom";
 
 import css from "./SideBar.module.css";
@@ -20,8 +20,14 @@ import { ReactComponent as WhiteTCIcon } from "../../assets/icons/t-c-white.svg"
 import { ReactComponent as GraySettingsIcon } from "../../assets/icons/settings-gray.svg";
 import { ReactComponent as WhiteSettingsIcon } from "../../assets/icons/settings-white.svg";
 import adminAvatar from "../../assets/icons/admin-avatar.png";
+import ClickAwayListener from "../../components/ClickAwayListener";
+const ModalAdd = React.lazy(() => import("./ModalAdd"));
+const ModalSearch = React.lazy(() => import("./ModalSearch"));
 
 function SideBar() {
+  const [modalAdd, setModalAdd] = useState(false);
+  const [modalSearch, setModalSearch] = useState(false);
+
   return (
     <aside className={css.sidebar}>
       <div className={css.logo}>
@@ -29,21 +35,47 @@ function SideBar() {
           <LogoIcon />
         </Link>
       </div>
-      <ul>
+      <ul className={css.list}>
         <li>
-          <Link to="/" className={css.icon}>
-            <GrayAddIcon className={css.normalIcon} />
-            <WhiteAddIcon className={css.hoverIcon} />
-          </Link>
+          <ClickAwayListener onClickAway={() => setModalAdd(false)}>
+            <button
+              className={`${css.icon} ${css.active}`}
+              onClick={() => setModalAdd(prev => !prev)}
+            >
+              <GrayAddIcon className={css.normalIcon} />
+              <WhiteAddIcon className={css.hoverIcon} />
+            </button>
+            {modalAdd && (
+              <Suspense fallback={null}>
+                <ModalAdd
+                  open={modalAdd}
+                  closeModal={() => setModalAdd(false)}
+                />
+              </Suspense>
+            )}
+          </ClickAwayListener>
         </li>
         <li>
-          <Link to="/" className={css.icon}>
-            <GraySearchIcon className={css.normalIcon} />
-            <WhiteSearchIcon className={css.hoverIcon} />
-          </Link>
+          <ClickAwayListener onClickAway={() => setModalSearch(false)}>
+            <button
+              className={css.icon}
+              onClick={() => setModalSearch(prev => !prev)}
+            >
+              <GraySearchIcon className={css.normalIcon} />
+              <WhiteSearchIcon className={css.hoverIcon} />
+            </button>
+            {modalSearch && (
+              <Suspense fallback={null}>
+                <ModalSearch
+                  open={modalSearch}
+                  closeModal={() => setModalSearch(false)}
+                />
+              </Suspense>
+            )}
+          </ClickAwayListener>
         </li>
       </ul>
-      <ul>
+      <ul className={css.list}>
         <li>
           <Link to="/" className={css.icon}>
             <GrayAmenitiesIcon className={css.normalIcon} />

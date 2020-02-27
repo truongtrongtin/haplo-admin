@@ -7,7 +7,7 @@
   width: 100%;
 }
 
-thead th {
+.table th {
   background-color: #f1f8ff;
   text-transform: uppercase;
   height: 36px;
@@ -20,15 +20,15 @@ thead th {
   color: #9095ae;
 }
 
-thead th:not(:first-child):not(:last-child) {
+.table th:not(:first-child):not(:last-child) {
   border-right: 1px solid #dde4ef;
 }
 
-tbody tr:not(:last-child) {
+.table tr:not(:last-child) {
   border-bottom: 1px solid #ebeef3;
 }
 
-tbody td {
+.table td {
   height: 40px;
   vertical-align: middle;
   padding: 0 7.5px;

@@ -1,0 +1,28 @@
+.searchModal {
+  width: 248px;
+  height: 301px;
+  border-radius: 8px;
+  box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  padding: 9px;
+  display: flex;
+  flex-direction: column;
+}
+
+.searchModal .item {
+  height: 28px;
+  border-radius: 4px;
+  padding: 8px 16px;
+  margin-top: 1px
+}
+
+.searchModal span {
+  cursor: pointer;
+}
+
+.searchModal span:hover {
+  background-color: #f4f6fd;
+}

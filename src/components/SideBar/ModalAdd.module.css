@@ -1,0 +1,33 @@
+.modalAdd {
+  border-radius: 8px;
+  box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  padding: 12px 8px;
+  display: flex;
+  flex-direction: column;
+}
+
+.modalAdd > li {
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  padding: 4px 8px;
+}
+
+.modalAdd > li:hover {
+  background-color: #f4f6fd;
+}
+
+.icon {
+  display: flex;
+}
+
+.text {
+  margin-left: 8px;
+  white-space: nowrap;
+  color: #171717;
+}
