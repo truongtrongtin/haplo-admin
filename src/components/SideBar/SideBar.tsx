@@ -29,56 +29,56 @@ function SideBar() {
           <LogoIcon />
         </Link>
       </div>
-      <ul className={css.list}>
+      <ul>
         <li>
           <Link to="/" className={css.icon}>
-            <GrayAddIcon className={css.inactiveIcon} />
-            <WhiteAddIcon className={css.activeIcon} />
+            <GrayAddIcon className={css.normalIcon} />
+            <WhiteAddIcon className={css.hoverIcon} />
           </Link>
         </li>
         <li>
           <Link to="/" className={css.icon}>
-            <GraySearchIcon className={css.inactiveIcon} />
-            <WhiteSearchIcon className={css.activeIcon} />
+            <GraySearchIcon className={css.normalIcon} />
+            <WhiteSearchIcon className={css.hoverIcon} />
           </Link>
         </li>
       </ul>
-      <ul className={css.list}>
+      <ul>
         <li>
           <Link to="/" className={css.icon}>
-            <GrayAmenitiesIcon className={css.inactiveIcon} />
-            <WhiteAmenitiesIcon className={css.activeIcon} />
+            <GrayAmenitiesIcon className={css.normalIcon} />
+            <WhiteAmenitiesIcon className={css.hoverIcon} />
+          </Link>
+        </li>
+        <li>
+          <Link to="/" className={`${css.icon} ${css.active}`}>
+            <GrayCompaniesIcon className={css.normalIcon} />
+            <WhiteCompaniesIcon className={css.hoverIcon} />
           </Link>
         </li>
         <li>
           <Link to="/" className={css.icon}>
-            <GrayCompaniesIcon className={css.inactiveIcon} />
-            <WhiteCompaniesIcon className={css.activeIcon} />
+            <GrayEmployeesIcon className={css.normalIcon} />
+            <WhiteEmployeesIcon className={css.hoverIcon} />
           </Link>
         </li>
         <li>
           <Link to="/" className={css.icon}>
-            <GrayEmployeesIcon className={css.inactiveIcon} />
-            <WhiteEmployeesIcon className={css.activeIcon} />
+            <GrayReportsIcon className={css.normalIcon} />
+            <WhiteReportsIcon className={css.hoverIcon} />
           </Link>
         </li>
         <li>
           <Link to="/" className={css.icon}>
-            <GrayReportsIcon className={css.inactiveIcon} />
-            <WhiteReportsIcon className={css.activeIcon} />
-          </Link>
-        </li>
-        <li>
-          <Link to="/" className={css.icon}>
-            <GrayTCIcon className={css.inactiveIcon} />
-            <WhiteTCIcon className={css.activeIcon} />
+            <GrayTCIcon className={css.normalIcon} />
+            <WhiteTCIcon className={css.hoverIcon} />
           </Link>
         </li>
       </ul>
       <div className={css.settings}>
         <Link to="/" className={css.icon}>
-          <GraySettingsIcon className={css.inactiveIcon} />
-          <WhiteSettingsIcon className={css.activeIcon} />
+          <GraySettingsIcon className={css.normalIcon} />
+          <WhiteSettingsIcon className={css.hoverIcon} />
         </Link>
         <div className={css.avatar}>
           <Link to="/">

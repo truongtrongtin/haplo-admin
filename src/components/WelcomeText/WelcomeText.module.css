@@ -1,0 +1,13 @@
+h1.welcomeText {
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 1.27;
+  margin: 0;
+  color: #000;
+  height: 28px;
+}
+
+.welcomeText strong {
+  font-size: 22px;
+  font-weight: 600;
+}

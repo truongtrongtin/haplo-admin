@@ -19,9 +19,26 @@ aside.sidebar {
   height: 40px;
 }
 
-ul.list {
+ul {
   padding: 7.5px 0;
   border-bottom: 1px solid rgba(255, 255, 255, .2);
+}
+
+a.active {
+  position: relative;
+  overflow: hidden;
+}
+
+a.active::before {
+  content: '';
+  height: 40px;
+  width: 8px;
+  border-radius: 3px;
+  background-color: #276ef1;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 0;
 }
 
 a.icon {
@@ -30,16 +47,14 @@ a.icon {
   padding: 16px 0;
 }
 
-a.icon .activeIcon {
+a.active .normalIcon,
+a.icon:hover .normalIcon,
+a.icon:not(.active) .hoverIcon {
   display: none;
 }
 
-a.icon:hover .activeIcon {
+a.icon:hover .hoverIcon {
   display: block;
-}
-
-a.icon:hover .inactiveIcon {
-  display: none;
 }
 
 .settings {

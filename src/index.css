@@ -23,19 +23,3 @@ body {
   background-color: #eceef4;
   padding: 12px;
 }
-
-.icon:hover svg:firstchild {
-
-}
-
-.icon:hover svg:first-child {
-  display: none;
-}
-
-.icon:hover svg:last-child {
-  display: block;
-}
-
-.icon svg:last-child {
-  display: none;
-}
