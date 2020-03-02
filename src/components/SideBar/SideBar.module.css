@@ -52,16 +52,6 @@ ul.list > li {
   width: 100%;
 }
 
-.active .normalIcon,
-.icon:hover .normalIcon,
-.icon:not(.active) .hoverIcon {
-  display: none;
-}
-
-.icon:hover .hoverIcon {
-  display: block;
-}
-
 .settings {
   display: flex;
   flex-direction: column;

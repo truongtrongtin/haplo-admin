@@ -2,10 +2,15 @@ import React, { useEffect, useRef } from "react";
 
 type Props = {
   children: React.ReactNode;
+  component: React.ElementType;
   onClickAway(): void;
 };
 
-function ClickAwayListener({ children, onClickAway }: Props) {
+function ClickAwayListener({
+  children,
+  component: Component,
+  onClickAway
+}: Props) {
   const ref = useRef<HTMLDivElement>(null!);
 
   function handleClickOutside(event: MouseEvent) {
@@ -24,7 +29,7 @@ function ClickAwayListener({ children, onClickAway }: Props) {
     };
   });
 
-  return <div ref={ref}>{children}</div>;
+  return <Component ref={ref}>{children}</Component>;
 }
 
 export default ClickAwayListener;
