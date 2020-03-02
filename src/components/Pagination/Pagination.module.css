@@ -1,15 +1,3 @@
 .pagesText {
   margin-right: 8px;
 }
-
-.iconButton:hover .normalIcon {
-  display: none;
-}
-
-.iconButton:hover .hoverIcon {
-  display: block;
-}
-
-.iconButton .hoverIcon {
-  display: none;
-}

@@ -5,16 +5,18 @@ import { ReactComponent as RecentAmenitiesIcon } from "../../assets/icons/recent
 import { ReactComponent as UserIcon } from "../../assets/icons/user.svg";
 import { ReactComponent as FilterIcon } from "../../assets/icons/filter.svg";
 import { ReactComponent as FilterHoverIcon } from "../../assets/icons/filter-on-hover.svg";
+import HoverIcon from "../HoverIcon";
 
 function RecentActivity() {
   return (
     <div className={css.wrapper}>
       <div className={css.header}>
         <span className={css.headerText}>Recent Activity</span>
-        <button className={css.filterIcon}>
-          <FilterIcon className={css.normalIcon} />
-          <FilterHoverIcon className={css.hoverIcon} />
-        </button>
+        <HoverIcon
+          component="button"
+          normalIcon={FilterIcon}
+          hoverIcon={FilterHoverIcon}
+        />
       </div>
       {[...Array(20)].map((item, index) => (
         <div className={css.recentItem} key={index}>

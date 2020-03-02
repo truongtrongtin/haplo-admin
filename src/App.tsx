@@ -1,23 +1,23 @@
-import React from "react";
+import React, { Fragment } from "react";
 import { Switch, Route } from "react-router-dom";
 
-import Sidebar from "./components/SideBar";
-import Home from "./pages/Home";
-import RecentActivity from "./components/RecentActivity";
+import Dashboard from "./layouts/Dashboard";
+import SignIn from "./pages/SignIn";
 import Backdrop from "./components/Backdrop";
 
 function App() {
   return (
-    <div style={{ display: "flex" }}>
-      <Sidebar />
+    <Fragment>
       <Switch>
-        <Route path="/">
-          <Home />
+        <Route exact path="/">
+          <Dashboard />
+        </Route>
+        <Route exact path="/signin">
+          <SignIn />
         </Route>
       </Switch>
-      <RecentActivity />
       <Backdrop open={false} />
-    </div>
+    </Fragment>
   );
 }
 

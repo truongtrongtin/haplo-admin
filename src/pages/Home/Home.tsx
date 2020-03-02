@@ -10,7 +10,7 @@ import Pagination from "../../components/Pagination";
 
 function Home() {
   return (
-    <div className={css.container}>
+    <div className={css.wrapper}>
       <div className={css.wrapper1}>
         <WelcomeText />
         <CurrentDate />

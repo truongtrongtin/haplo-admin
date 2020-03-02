@@ -22,23 +22,6 @@
   height: 24px;
 }
 
-.filterIcon {
-  height: 24px;
-  width: 24px;
-}
-
-.filterIcon .hoverIcon {
-  display: none;
-}
-
-.filterIcon:hover .hoverIcon {
-  display: block;
-}
-
-.filterIcon:hover .normalIcon {
-  display: none;
-}
-
 .recentItem {
   display: flex;
   padding: 18px 0;

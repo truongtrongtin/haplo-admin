@@ -21,7 +21,7 @@ import { ReactComponent as GraySettingsIcon } from "../../assets/icons/settings-
 import { ReactComponent as WhiteSettingsIcon } from "../../assets/icons/settings-white.svg";
 import adminAvatar from "../../assets/icons/admin-avatar.png";
 import ClickAwayListener from "../../components/ClickAwayListener";
-import HoverIcon from "./HoverIcon";
+import HoverIcon from "..//HoverIcon";
 const ModalAdd = React.lazy(() => import("./ModalAdd"));
 const ModalSearch = React.lazy(() => import("./ModalSearch"));
 
