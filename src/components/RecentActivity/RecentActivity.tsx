@@ -17,6 +17,7 @@ function RecentActivity() {
           normalIcon={FilterIcon}
           hoverIcon={FilterHoverIcon}
         />
+        <div className={css.root}>ds</div>
       </div>
       {[...Array(20)].map((item, index) => (
         <div className={css.recentItem} key={index}>

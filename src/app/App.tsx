@@ -1,9 +1,9 @@
 import React, { Fragment } from "react";
 import { Switch, Route } from "react-router-dom";
 
-import Dashboard from "./layouts/Dashboard";
-import SignIn from "./pages/SignIn";
-import Backdrop from "./components/Backdrop";
+import Dashboard from "../layouts/Dashboard";
+import SignIn from "../pages/SignIn";
+import Backdrop from "../components/Backdrop";
 
 function App() {
   return (
@@ -16,7 +16,7 @@ function App() {
           <SignIn />
         </Route>
       </Switch>
-      <Backdrop open={false} />
+      <Backdrop />
     </Fragment>
   );
 }

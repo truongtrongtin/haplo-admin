@@ -1,12 +1,12 @@
 import React from "react";
+import { useSelector } from "react-redux";
 
 import css from "./Backdrop.module.css";
+import { RootState } from "../../app/rootReducer";
 
-type BackdropProps = {
-  open?: boolean;
-};
+function Backdrop() {
+  const open = useSelector((state: RootState) => state.backdrop.open);
 
-function Backdrop({ open = false }: BackdropProps) {
   return <div className={`${css.backdrop} ${open && css.open}`} />;
 }
 

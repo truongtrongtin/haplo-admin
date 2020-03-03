@@ -1,5 +1,6 @@
-import React, { useState, Suspense } from "react";
+import React, { useState, Suspense, useEffect } from "react";
 import { Link } from "react-router-dom";
+import { useDispatch } from "react-redux";
 
 import css from "./SideBar.module.css";
 import { ReactComponent as LogoIcon } from "../../assets/icons/logo-northgate.svg";
@@ -22,12 +23,22 @@ import { ReactComponent as WhiteSettingsIcon } from "../../assets/icons/settings
 import adminAvatar from "../../assets/icons/admin-avatar.png";
 import ClickAwayListener from "../../components/ClickAwayListener";
 import HoverIcon from "..//HoverIcon";
+import { showBackdrop, hideBackdrop } from "../Backdrop/backdropSlice";
 const ModalAdd = React.lazy(() => import("./ModalAdd"));
 const ModalSearch = React.lazy(() => import("./ModalSearch"));
 
 function SideBar() {
+  const dispatch = useDispatch();
   const [modalAdd, setModalAdd] = useState(false);
   const [modalSearch, setModalSearch] = useState(false);
+
+  useEffect(() => {
+    if (modalAdd || modalSearch) {
+      dispatch(showBackdrop());
+    } else {
+      dispatch(hideBackdrop());
+    }
+  });
 
   return (
     <aside className={css.sidebar}>

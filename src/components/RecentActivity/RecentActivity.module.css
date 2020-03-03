@@ -13,6 +13,7 @@
   display: flex;
   justify-content: space-between;
   margin-bottom: 10px;
+  position: relative;
 }
 
 .headerText {
@@ -69,4 +70,14 @@
 
 .time {
   margin-left: auto;
+}
+
+.root {
+  height: 507px;
+  border-radius: 8px;
+  box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  position: absolute;
+  left: 0;
+  right: 0;
 }
