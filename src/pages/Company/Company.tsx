@@ -1,6 +1,6 @@
 import React from "react";
 
-import css from "./Home.module.css";
+import css from "./Company.module.css";
 import WelcomeText from "../../components/WelcomeText";
 import CurrentDate from "../../components/CurrentDate";
 import SectionName from "../../components/SectionName";
@@ -8,7 +8,7 @@ import TableAction from "../../components/TableAction";
 import Table from "../../components/Table";
 import Pagination from "../../components/Pagination";
 
-function Home() {
+function Company() {
   return (
     <div className={css.wrapper}>
       <div className={css.wrapper1}>
@@ -29,4 +29,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default Company;

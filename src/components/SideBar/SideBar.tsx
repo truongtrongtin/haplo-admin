@@ -21,8 +21,8 @@ import { ReactComponent as WhiteTCIcon } from "../../assets/icons/t-c-white.svg"
 import { ReactComponent as GraySettingsIcon } from "../../assets/icons/settings-gray.svg";
 import { ReactComponent as WhiteSettingsIcon } from "../../assets/icons/settings-white.svg";
 import adminAvatar from "../../assets/icons/admin-avatar.png";
-import ClickAwayListener from "../../components/ClickAwayListener";
-import HoverIcon from "..//HoverIcon";
+import ClickAwayListener from "@material-ui/core/ClickAwayListener";
+import HoverIcon from "../HoverIcon";
 import { showBackdrop, hideBackdrop } from "../Backdrop/backdropSlice";
 const ModalAdd = React.lazy(() => import("./ModalAdd"));
 const ModalSearch = React.lazy(() => import("./ModalSearch"));
@@ -48,51 +48,52 @@ function SideBar() {
         </Link>
       </div>
       <ul className={css.list}>
-        <ClickAwayListener
-          component="li"
-          onClickAway={() => setModalAdd(false)}
-        >
-          <HoverIcon
-            component="button"
-            className={css.icon}
-            normalIcon={GrayAddIcon}
-            hoverIcon={WhiteAddIcon}
-            active={modalAdd}
-            onClick={() => setModalAdd(prev => !prev)}
-          />
-          {modalAdd && (
-            <Suspense fallback={null}>
-              <ModalAdd open={modalAdd} closeModal={() => setModalAdd(false)} />
-            </Suspense>
-          )}
+        <ClickAwayListener onClickAway={() => setModalAdd(false)}>
+          <li>
+            <HoverIcon
+              component="button"
+              className={css.icon}
+              normalIcon={GrayAddIcon}
+              hoverIcon={WhiteAddIcon}
+              active={modalAdd}
+              onClick={() => setModalAdd(prev => !prev)}
+            />
+            {modalAdd && (
+              <Suspense fallback={null}>
+                <ModalAdd
+                  open={modalAdd}
+                  closeModal={() => setModalAdd(false)}
+                />
+              </Suspense>
+            )}
+          </li>
         </ClickAwayListener>
-        <ClickAwayListener
-          component="li"
-          onClickAway={() => setModalSearch(false)}
-        >
-          <HoverIcon
-            component="button"
-            className={css.icon}
-            normalIcon={GraySearchIcon}
-            hoverIcon={WhiteSearchIcon}
-            active={modalSearch}
-            onClick={() => setModalSearch(prev => !prev)}
-          />
-          {modalSearch && (
-            <Suspense fallback={null}>
-              <ModalSearch
-                open={modalSearch}
-                closeModal={() => setModalSearch(false)}
-              />
-            </Suspense>
-          )}
+        <ClickAwayListener onClickAway={() => setModalSearch(false)}>
+          <li>
+            <HoverIcon
+              component="button"
+              className={css.icon}
+              normalIcon={GraySearchIcon}
+              hoverIcon={WhiteSearchIcon}
+              active={modalSearch}
+              onClick={() => setModalSearch(prev => !prev)}
+            />
+            {modalSearch && (
+              <Suspense fallback={null}>
+                <ModalSearch
+                  open={modalSearch}
+                  closeModal={() => setModalSearch(false)}
+                />
+              </Suspense>
+            )}
+          </li>
         </ClickAwayListener>
       </ul>
       <ul className={css.list}>
         <li>
           <HoverIcon
             component={Link}
-            to="/"
+            to="/amenities"
             className={css.icon}
             normalIcon={GrayAmenitiesIcon}
             hoverIcon={WhiteAmenitiesIcon}
@@ -101,7 +102,7 @@ function SideBar() {
         <li>
           <HoverIcon
             component={Link}
-            to="/"
+            to="/companies"
             className={`${css.icon} ${css.active}`}
             normalIcon={GrayCompaniesIcon}
             hoverIcon={WhiteCompaniesIcon}
@@ -144,7 +145,7 @@ function SideBar() {
           hoverIcon={WhiteSettingsIcon}
         />
         <div className={css.avatar}>
-          <Link to="/">
+          <Link to="/signin">
             <img src={adminAvatar} alt="admin-avatar" />
           </Link>
         </div>

@@ -2,34 +2,51 @@
   display: flex;
 }
 
+.leftWrapper {
+  position: relative;
+}
+
 .signInImg {
   max-height: 100vh;
 }
 
-.wrapper2 {
+.logo {
+  left: 40px;
+  top: 40px;
+  position: absolute;
+}
+
+.rightWrapper {
   flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.form {
+.title {
+  font-size: 26px;
+  font-weight: 600;
+  line-height: 0.85;
+  color: #171717;
+}
+
+.marginTop {
+  margin-top: 40px;
+}
+
+.rememberWrapper {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.forgotPassword {
-  font-size: 14px;
-  font-weight: 500;
-  color: #276ef1;
-  line-height: 1.43;
-  text-decoration: none;
-}
-
-.forgotPassword:hover {
-  text-decoration: underline;
-}
-
-.MuiButton-root {
+.button {
+  margin-top: 40px;
+  height: 48px;
+  border-radius: 8px;
   background-color: #276ef1;
+}
+
+.buttonLabel {
+  color: #fff
 }

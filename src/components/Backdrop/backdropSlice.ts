@@ -1,16 +1,10 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-type backdropState = {
-  open: boolean;
-};
-
-const initialState: backdropState = {
-  open: false
-};
+type backdropState = { open: boolean };
 
 const backdropSlice = createSlice({
   name: "backdrop",
-  initialState,
+  initialState: { open: false } as backdropState,
   reducers: {
     showBackdrop(state) {
       state.open = true;

@@ -4,7 +4,7 @@ type Props = {
   component: React.ElementType;
   normalIcon: React.ElementType;
   hoverIcon: React.ElementType;
-  active: boolean;
+  active?: boolean;
 };
 
 function HoverIcon({
