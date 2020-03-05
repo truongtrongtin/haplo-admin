@@ -6,11 +6,10 @@ import { ReactComponent as BlackEmployeesIcon } from "../../assets/icons/employe
 import { ReactComponent as BlackAmenitiesIcon } from "../../assets/icons/amenities-black.svg";
 
 type ModalAddProps = {
-  open?: boolean;
   closeModal(): void;
 };
 
-function ModalAdd({ open = false, closeModal }: ModalAddProps) {
+function ModalAdd({ closeModal }: ModalAddProps) {
   return (
     <ul className={css.modalAdd}>
       <li onClick={closeModal}>

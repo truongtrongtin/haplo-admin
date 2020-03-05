@@ -23,6 +23,10 @@
   align-items: center;
 }
 
+.form {
+  width: 419px;
+}
+
 .title {
   font-size: 26px;
   font-weight: 600;
@@ -38,15 +42,29 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-top: 10px;
 }
 
-.button {
+.rememberLabel {
+  opacity: 0.2;
+  font-size: 14px;
+  line-height: 1.43;
+  color: #171717;
+}
+
+.forgotLink {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.43;
+  color: #276ef1;
+}
+
+.signInButton {
   margin-top: 40px;
   height: 48px;
   border-radius: 8px;
-  background-color: #276ef1;
-}
-
-.buttonLabel {
-  color: #fff
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 0.71;
+  width: 100%
 }

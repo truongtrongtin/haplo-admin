@@ -20,20 +20,32 @@ import { ReactComponent as GrayTCIcon } from "../../assets/icons/t-c-gray.svg";
 import { ReactComponent as WhiteTCIcon } from "../../assets/icons/t-c-white.svg";
 import { ReactComponent as GraySettingsIcon } from "../../assets/icons/settings-gray.svg";
 import { ReactComponent as WhiteSettingsIcon } from "../../assets/icons/settings-white.svg";
-import adminAvatar from "../../assets/icons/admin-avatar.png";
+import sidebarAvatar from "../../assets/images/avatar-sidebar.png";
 import ClickAwayListener from "@material-ui/core/ClickAwayListener";
 import HoverIcon from "../HoverIcon";
 import { showBackdrop, hideBackdrop } from "../Backdrop/backdropSlice";
 const ModalAdd = React.lazy(() => import("./ModalAdd"));
 const ModalSearch = React.lazy(() => import("./ModalSearch"));
+const ModalProfile = React.lazy(() => import("./ModalProfile"));
 
 function SideBar() {
   const dispatch = useDispatch();
-  const [modalAdd, setModalAdd] = useState(false);
-  const [modalSearch, setModalSearch] = useState(false);
+  const [modalState, setModalState] = useState<React.ComponentState>({
+    modalAdd: false,
+    modalSearch: false,
+    modalProfile: false
+  });
+
+  function toggleModal(modalName: string) {
+    setModalState({ ...modalState, [modalName]: !modalState[modalName] });
+  }
+
+  function closeModal(modalName: string) {
+    setModalState({ ...modalState, [modalName]: false });
+  }
 
   useEffect(() => {
-    if (modalAdd || modalSearch) {
+    if (modalState.modalAdd || modalState.modalSearch) {
       dispatch(showBackdrop());
     } else {
       dispatch(hideBackdrop());
@@ -48,42 +60,37 @@ function SideBar() {
         </Link>
       </div>
       <ul className={css.list}>
-        <ClickAwayListener onClickAway={() => setModalAdd(false)}>
+        <ClickAwayListener onClickAway={() => closeModal("modalAdd")}>
           <li>
             <HoverIcon
+              id="modalAdd"
               component="button"
               className={css.icon}
               normalIcon={GrayAddIcon}
               hoverIcon={WhiteAddIcon}
-              active={modalAdd}
-              onClick={() => setModalAdd(prev => !prev)}
+              active={modalState.modalAdd}
+              onClick={() => toggleModal("modalAdd")}
             />
-            {modalAdd && (
+            {modalState.modalAdd && (
               <Suspense fallback={null}>
-                <ModalAdd
-                  open={modalAdd}
-                  closeModal={() => setModalAdd(false)}
-                />
+                <ModalAdd closeModal={() => closeModal} />
               </Suspense>
             )}
           </li>
         </ClickAwayListener>
-        <ClickAwayListener onClickAway={() => setModalSearch(false)}>
+        <ClickAwayListener onClickAway={() => closeModal("modalSearch")}>
           <li>
             <HoverIcon
               component="button"
               className={css.icon}
               normalIcon={GraySearchIcon}
               hoverIcon={WhiteSearchIcon}
-              active={modalSearch}
-              onClick={() => setModalSearch(prev => !prev)}
+              active={modalState.modalSearch}
+              onClick={() => toggleModal("modalSearch")}
             />
-            {modalSearch && (
+            {modalState.modalSearch && (
               <Suspense fallback={null}>
-                <ModalSearch
-                  open={modalSearch}
-                  closeModal={() => setModalSearch(false)}
-                />
+                <ModalSearch closeModal={() => closeModal("modalSearch")} />
               </Suspense>
             )}
           </li>
@@ -144,11 +151,18 @@ function SideBar() {
           normalIcon={GraySettingsIcon}
           hoverIcon={WhiteSettingsIcon}
         />
-        <div className={css.avatar}>
-          <Link to="/signin">
-            <img src={adminAvatar} alt="admin-avatar" />
-          </Link>
-        </div>
+        <ClickAwayListener onClickAway={() => closeModal("modalProfile")}>
+          <div className={css.avatar}>
+            <button onClick={() => toggleModal("modalProfile")}>
+              <img src={sidebarAvatar} alt="sidebar-avatar" />
+            </button>
+            {modalState.modalProfile && (
+              <Suspense fallback={null}>
+                <ModalProfile closeModal={() => closeModal("modalProfile")} />
+              </Suspense>
+            )}
+          </div>
+        </ClickAwayListener>
       </div>
     </aside>
   );

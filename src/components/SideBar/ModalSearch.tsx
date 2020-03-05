@@ -3,11 +3,10 @@ import React from "react";
 import css from "./ModalSearch.module.css";
 
 type ModalSearchProps = {
-  open?: boolean;
   closeModal(): void;
 };
 
-function ModalSearch({ open = false, closeModal }: ModalSearchProps) {
+function ModalSearch({ closeModal }: ModalSearchProps) {
   return (
     <div className={css.searchModal}>
       <input className={`${css.item} ${css.input}`} type="text" />

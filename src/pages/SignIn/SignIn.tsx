@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link as RouterLink } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { Formik, Form, Field } from "formik";
 import * as Yup from "yup";
@@ -8,10 +8,11 @@ import {
   TextField,
   InputAdornment,
   IconButton,
-  Button,
   Checkbox,
-  FormControlLabel
+  FormControlLabel,
+  Link
 } from "@material-ui/core";
+import StyledButton from "../../components/StyledButton";
 
 import { ReactComponent as EyeIcon } from "../../assets/icons/eye.svg";
 import { ReactComponent as EyeOffIcon } from "../../assets/icons/eyeoff.svg";
@@ -52,7 +53,7 @@ function SignIn() {
           }}
         >
           {({ errors, touched }) => (
-            <Form noValidate>
+            <Form noValidate className={css.form}>
               <h1 className={css.title}>Sign in</h1>
               <Field
                 as={TextField}
@@ -90,20 +91,25 @@ function SignIn() {
               />
               <div className={css.rememberWrapper}>
                 <FormControlLabel
+                  className={css.rememberLabel}
                   control={<Checkbox value="checkedB" color="primary" />}
-                  label="Primary"
+                  label="Remember me"
                 />
-                <Link to="/forgot">Forgot password?</Link>
+                <Link
+                  component={RouterLink}
+                  className={css.forgotLink}
+                  to="/forgot"
+                >
+                  Forgot password?
+                </Link>
               </div>
-              <Button
+              <StyledButton
                 type="submit"
                 variant="contained"
-                fullWidth
-                color="primary"
-                classes={{ root: css.button, label: css.buttonLabel }}
+                className={css.signInButton}
               >
                 Sign In
-              </Button>
+              </StyledButton>
             </Form>
           )}
         </Formik>

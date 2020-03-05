@@ -5,6 +5,7 @@ aside.sidebar {
   background-color: #171717;
   display: inline-flex;
   flex-direction: column;
+  z-index: 1;
 }
 
 .logo {
@@ -63,9 +64,10 @@ ul.list > li {
   justify-content: center;
   padding-bottom: 14px;
   padding-top: 8px;
+  position: relative;
 }
 
-.avatar > a {
+.avatar > button {
   width: 32px;
-  height: 32px
+  height: 32px;
 }
