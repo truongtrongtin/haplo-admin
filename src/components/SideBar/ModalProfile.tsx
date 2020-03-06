@@ -5,7 +5,7 @@ import { Dialog } from "@material-ui/core";
 import css from "./ModalProfile.module.css";
 import avatarProfile from "../../assets/images/avatar-profile.png";
 import StyledButton from "../../components/StyledButton";
-import { ReactComponent as CloseGrayIcon } from "../../assets/icons/close-gray.svg";
+import { ReactComponent as CloseGreyIcon } from "../../assets/icons/close-grey.svg";
 
 type ModalProfileProps = {
   closeModal(): void;
@@ -41,7 +41,7 @@ function ModalProfile({ closeModal }: ModalProfileProps) {
         onClose={onClose}
       >
         <button className={css.closeButton} onClick={onClose}>
-          <CloseGrayIcon />
+          <CloseGreyIcon />
         </button>
         <div className={css.confirmText}>Are you sure want to logout?</div>
         <div className={css.modalButtons}>

@@ -1,10 +1,11 @@
 import React, { Fragment } from "react";
-import { Switch, Route, Redirect } from "react-router-dom";
+import { Switch, Redirect } from "react-router-dom";
 
 import Toast from "../components/Toast";
-import PrivateRoute from "../components/PrivateRoute";
-import DashboardLayout from "../components/DashboardLayout";
+import DashboardRoute from "../layouts/DashboardRoute";
+import WelcomeRoute from "../layouts/WelcomeRoute";
 import SignIn from "../pages/SignIn";
+import ResetPassword from "../pages/ResetPassword";
 import Company from "../pages/Company";
 import Amenity from "../pages/Amenity";
 import Backdrop from "../components/Backdrop";
@@ -15,11 +16,10 @@ function App() {
       <Toast />
       <Switch>
         <Redirect exact from="/" to="/companies" />
-        <Route path="/signin" component={SignIn} />
-        <DashboardLayout>
-          <PrivateRoute path="/companies" component={Company} />
-          <PrivateRoute path="/amenities" component={Amenity} />
-        </DashboardLayout>
+        <WelcomeRoute path="/signin" component={SignIn} />
+        <WelcomeRoute path="/reset" component={ResetPassword} />
+        <DashboardRoute path="/companies" component={Company} />
+        <DashboardRoute path="/amenities" component={Amenity} />
       </Switch>
       <Backdrop />
     </Fragment>

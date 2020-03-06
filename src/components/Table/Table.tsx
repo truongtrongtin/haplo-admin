@@ -21,7 +21,7 @@ function Table() {
         </tr>
       </thead>
       <tbody>
-        {[...Array(17)].map((item, index) => (
+        {[...Array(10)].map((item, index) => (
           <tr key={index}>
             <td>
               <input type="checkbox" />

@@ -2,4 +2,6 @@
   display: flex;
   padding: 12px;
   background-color: #eceef4;
+  height: 100vh;
+  min-height: 633px
 }

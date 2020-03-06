@@ -10,17 +10,13 @@ import * as serviceWorker from "./serviceWorker";
 import { Router } from "react-router-dom";
 import { StylesProvider } from "@material-ui/core/styles";
 import { CssBaseline } from "@material-ui/core";
-import { ThemeProvider } from "@material-ui/core/styles";
-import muiTheme from "./app/muiTheme";
 
 ReactDOM.render(
   <Provider store={store}>
     <Router history={history}>
       <StylesProvider injectFirst>
-        <ThemeProvider theme={muiTheme}>
-          <CssBaseline />
-          <App />
-        </ThemeProvider>
+        <CssBaseline />
+        <App />
       </StylesProvider>
     </Router>
   </Provider>,

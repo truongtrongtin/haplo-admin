@@ -30,3 +30,7 @@ button {
   outline: none;
   display: inline-flex;
 }
+
+svg {
+  display: block;
+}

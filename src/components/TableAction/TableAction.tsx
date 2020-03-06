@@ -4,7 +4,7 @@ import { ReactComponent as FilterIcon } from "../../assets/icons/filter.svg";
 import { ReactComponent as FilterHoverIcon } from "../../assets/icons/filter-on-hover.svg";
 import { ReactComponent as CreateIcon } from "../../assets/icons/create.svg";
 import { ReactComponent as CreateHoverIcon } from "../../assets/icons/create-hover.svg";
-import { ReactComponent as SearchIcon } from "../../assets/icons/search-gray.svg";
+import { ReactComponent as SearchIcon } from "../../assets/icons/search-grey.svg";
 import { ReactComponent as SearchHoverIcon } from "../../assets/icons/search-black.svg";
 import HoverIcon from "../HoverIcon";
 

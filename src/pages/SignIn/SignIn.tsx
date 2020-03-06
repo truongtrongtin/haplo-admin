@@ -17,10 +17,8 @@ import StyledButton from "../../components/StyledButton";
 import { ReactComponent as EyeIcon } from "../../assets/icons/eye.svg";
 import { ReactComponent as EyeOffIcon } from "../../assets/icons/eyeoff.svg";
 import css from "./SignIn.module.css";
-import girl from "../../assets/images/girl.jpg";
-import logo from "../../assets/images/logo-northgate.png";
 
-function SignIn() {
+function SignInForm() {
   const dispatch = useDispatch();
   const [isShowPassword, setIsShowPassword] = useState(false);
 
@@ -28,94 +26,82 @@ function SignIn() {
     setIsShowPassword(prevState => !prevState);
 
   return (
-    <div className={css.root}>
-      <div className={css.leftWrapper}>
-        <img className={css.signInImg} src={girl} alt="sign-in" />
-        <img className={css.logo} src={logo} alt="logo" />
-      </div>
-      <div className={css.rightWrapper}>
-        <Formik
-          initialValues={{
-            email: "",
-            password: ""
-          }}
-          validationSchema={Yup.object({
-            email: Yup.string()
-              .label("Email")
-              .email("Invalid email address")
-              .required(),
-            password: Yup.string()
-              .label("Password")
-              .required()
-          })}
-          onSubmit={({ email, password }) => {
-            dispatch(signIn({ email, password }));
-          }}
-        >
-          {({ errors, touched }) => (
-            <Form noValidate className={css.form}>
-              <h1 className={css.title}>Sign in</h1>
-              <Field
-                as={TextField}
-                className={css.marginTop}
-                fullWidth
-                name="email"
-                type="email"
-                label="Email ID"
-                error={errors.email && touched.email}
-                helperText={errors.email && touched.email ? errors.email : null}
-              />
-              <Field
-                as={TextField}
-                className={css.marginTop}
-                fullWidth
-                name="password"
-                label="Password"
-                error={errors.password && touched.password}
-                helperText={
-                  errors.password && touched.password ? errors.password : null
-                }
-                type={isShowPassword ? "text" : "password"}
-                InputProps={{
-                  endAdornment: (
-                    <InputAdornment position="end">
-                      <IconButton
-                        aria-label="toggle password visibility"
-                        onClick={onTogglePasswordVisibility}
-                      >
-                        {isShowPassword ? <EyeIcon /> : <EyeOffIcon />}
-                      </IconButton>
-                    </InputAdornment>
-                  )
-                }}
-              />
-              <div className={css.rememberWrapper}>
-                <FormControlLabel
-                  className={css.rememberLabel}
-                  control={<Checkbox value="checkedB" color="primary" />}
-                  label="Remember me"
-                />
-                <Link
-                  component={RouterLink}
-                  className={css.forgotLink}
-                  to="/forgot"
-                >
-                  Forgot password?
-                </Link>
-              </div>
-              <StyledButton
-                type="submit"
-                variant="contained"
-                className={css.signInButton}
-              >
-                Sign In
-              </StyledButton>
-            </Form>
-          )}
-        </Formik>
-      </div>
-    </div>
+    <Formik
+      initialValues={{
+        email: "",
+        password: ""
+      }}
+      validationSchema={Yup.object({
+        email: Yup.string()
+          .label("Email")
+          .email("Invalid email address")
+          .required(),
+        password: Yup.string()
+          .label("Password")
+          .required()
+      })}
+      onSubmit={({ email, password }) => {
+        dispatch(signIn({ email, password }));
+      }}
+    >
+      {({ errors, touched }) => (
+        <Form noValidate className={css.form}>
+          <h1 className={css.title}>Sign in</h1>
+          <Field
+            as={TextField}
+            className={css.marginTop}
+            fullWidth
+            name="email"
+            type="email"
+            label="Email ID"
+            error={errors.email && touched.email}
+            helperText={errors.email && touched.email ? errors.email : null}
+          />
+          <Field
+            as={TextField}
+            className={css.marginTop}
+            fullWidth
+            name="password"
+            label="Password"
+            error={errors.password && touched.password}
+            helperText={
+              errors.password && touched.password ? errors.password : null
+            }
+            type={isShowPassword ? "text" : "password"}
+            InputProps={{
+              endAdornment: (
+                <InputAdornment position="end">
+                  <IconButton
+                    aria-label="toggle password visibility"
+                    onClick={onTogglePasswordVisibility}
+                  >
+                    {isShowPassword ? <EyeIcon /> : <EyeOffIcon />}
+                  </IconButton>
+                </InputAdornment>
+              )
+            }}
+          />
+          <div className={css.rememberWrapper}>
+            <FormControlLabel
+              className={css.rememberLabel}
+              control={<Checkbox value="checkedB" />}
+              label="Remember me"
+            />
+            <Link component={RouterLink} className={css.forgotLink} to="/reset">
+              Forgot password?
+            </Link>
+          </div>
+          <StyledButton
+            type="submit"
+            variant="contained"
+            className={css.signInButton}
+          >
+            Sign In
+          </StyledButton>
+        </Form>
+      )}
+    </Formik>
   );
 }
 
-export default SignIn;
+export default SignInForm;

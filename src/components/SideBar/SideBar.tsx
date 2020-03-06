@@ -4,21 +4,21 @@ import { useDispatch } from "react-redux";
 
 import css from "./SideBar.module.css";
 import { ReactComponent as LogoIcon } from "../../assets/icons/logo-northgate.svg";
-import { ReactComponent as GrayAddIcon } from "../../assets/icons/add-gray.svg";
+import { ReactComponent as GreyAddIcon } from "../../assets/icons/add-grey.svg";
 import { ReactComponent as WhiteAddIcon } from "../../assets/icons/add-white.svg";
-import { ReactComponent as GrayAmenitiesIcon } from "../../assets/icons/amenities-gray.svg";
+import { ReactComponent as GreyAmenitiesIcon } from "../../assets/icons/amenities-grey.svg";
 import { ReactComponent as WhiteAmenitiesIcon } from "../../assets/icons/amenities-white.svg";
-import { ReactComponent as GrayCompaniesIcon } from "../../assets/icons/companies-gray.svg";
+import { ReactComponent as GreyCompaniesIcon } from "../../assets/icons/companies-grey.svg";
 import { ReactComponent as WhiteCompaniesIcon } from "../../assets/icons/companies-white.svg";
-import { ReactComponent as GrayEmployeesIcon } from "../../assets/icons/employees-gray.svg";
+import { ReactComponent as GreyEmployeesIcon } from "../../assets/icons/employees-grey.svg";
 import { ReactComponent as WhiteEmployeesIcon } from "../../assets/icons/employees-white.svg";
-import { ReactComponent as GrayReportsIcon } from "../../assets/icons/reports-gray.svg";
+import { ReactComponent as GreyReportsIcon } from "../../assets/icons/reports-grey.svg";
 import { ReactComponent as WhiteReportsIcon } from "../../assets/icons/reports-white.svg";
-import { ReactComponent as GraySearchIcon } from "../../assets/icons/search-gray.svg";
+import { ReactComponent as GreySearchIcon } from "../../assets/icons/search-grey.svg";
 import { ReactComponent as WhiteSearchIcon } from "../../assets/icons/search-white.svg";
-import { ReactComponent as GrayTCIcon } from "../../assets/icons/t-c-gray.svg";
+import { ReactComponent as GreyTCIcon } from "../../assets/icons/t-c-grey.svg";
 import { ReactComponent as WhiteTCIcon } from "../../assets/icons/t-c-white.svg";
-import { ReactComponent as GraySettingsIcon } from "../../assets/icons/settings-gray.svg";
+import { ReactComponent as GreySettingsIcon } from "../../assets/icons/settings-grey.svg";
 import { ReactComponent as WhiteSettingsIcon } from "../../assets/icons/settings-white.svg";
 import sidebarAvatar from "../../assets/images/avatar-sidebar.png";
 import ClickAwayListener from "@material-ui/core/ClickAwayListener";
@@ -66,7 +66,7 @@ function SideBar() {
               id="modalAdd"
               component="button"
               className={css.icon}
-              normalIcon={GrayAddIcon}
+              normalIcon={GreyAddIcon}
               hoverIcon={WhiteAddIcon}
               active={modalState.modalAdd}
               onClick={() => toggleModal("modalAdd")}
@@ -83,7 +83,7 @@ function SideBar() {
             <HoverIcon
               component="button"
               className={css.icon}
-              normalIcon={GraySearchIcon}
+              normalIcon={GreySearchIcon}
               hoverIcon={WhiteSearchIcon}
               active={modalState.modalSearch}
               onClick={() => toggleModal("modalSearch")}
@@ -102,7 +102,7 @@ function SideBar() {
             component={Link}
             to="/amenities"
             className={css.icon}
-            normalIcon={GrayAmenitiesIcon}
+            normalIcon={GreyAmenitiesIcon}
             hoverIcon={WhiteAmenitiesIcon}
           />
         </li>
@@ -111,7 +111,7 @@ function SideBar() {
             component={Link}
             to="/companies"
             className={`${css.icon} ${css.active}`}
-            normalIcon={GrayCompaniesIcon}
+            normalIcon={GreyCompaniesIcon}
             hoverIcon={WhiteCompaniesIcon}
           />
         </li>
@@ -120,7 +120,7 @@ function SideBar() {
             component={Link}
             to="/"
             className={css.icon}
-            normalIcon={GrayEmployeesIcon}
+            normalIcon={GreyEmployeesIcon}
             hoverIcon={WhiteEmployeesIcon}
           />
         </li>
@@ -129,7 +129,7 @@ function SideBar() {
             component={Link}
             to="/"
             className={css.icon}
-            normalIcon={GrayReportsIcon}
+            normalIcon={GreyReportsIcon}
             hoverIcon={WhiteReportsIcon}
           />
         </li>
@@ -138,7 +138,7 @@ function SideBar() {
             component={Link}
             to="/"
             className={css.icon}
-            normalIcon={GrayTCIcon}
+            normalIcon={GreyTCIcon}
             hoverIcon={WhiteTCIcon}
           />
         </li>
@@ -148,7 +148,7 @@ function SideBar() {
           component={Link}
           to="/"
           className={css.icon}
-          normalIcon={GraySettingsIcon}
+          normalIcon={GreySettingsIcon}
           hoverIcon={WhiteSettingsIcon}
         />
         <ClickAwayListener onClickAway={() => closeModal("modalProfile")}>
