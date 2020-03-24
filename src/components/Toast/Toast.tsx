@@ -2,7 +2,7 @@ import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Snackbar } from "@material-ui/core";
 import { Alert } from "@material-ui/lab";
-import { RootState } from "../../app/rootReducer";
+import { RootState } from "app/rootReducer";
 
 import { hideToast } from "./toastSlice";
 

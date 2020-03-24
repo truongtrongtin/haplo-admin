@@ -4,7 +4,7 @@ import css from "./StyledButton.module.css";
 function StyledButton({ children, className, variant, ...props }: any) {
   const classNameMap: any = {
     outlined: css.outlined,
-    contained: css.contained
+    contained: css.contained,
   };
 
   return (

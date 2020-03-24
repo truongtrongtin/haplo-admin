@@ -1,8 +1,8 @@
 import React from "react";
 
 import css from "./Table.module.css";
-import { ReactComponent as ToggleButtonOn } from "../../assets/icons/toggle-on.svg";
-import { ReactComponent as ToggleButtonOff } from "../../assets/icons/toggle-off.svg";
+import { ReactComponent as ToggleButtonOn } from "assets/icons/toggle-on.svg";
+import { ReactComponent as ToggleButtonOff } from "assets/icons/toggle-off.svg";
 
 function Table() {
   return (

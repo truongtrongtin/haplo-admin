@@ -2,8 +2,8 @@ import React from "react";
 import { Route, Redirect } from "react-router-dom";
 
 import css from "./DashboardRoute.module.css";
-import SideBar from "../../components/SideBar";
-import RecentActivity from "../../components/RecentActivity";
+import SideBar from "components/SideBar";
+import RecentActivity from "components/RecentActivity";
 
 type DashboardLayoutProps = { children: React.ReactNode };
 

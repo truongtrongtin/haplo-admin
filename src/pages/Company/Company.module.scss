@@ -15,14 +15,14 @@
   justify-content: space-between;
   align-items: flex-end;
   margin-top: 14px;
-}
 
-.wrapper2 button {
-  vertical-align: middle;
-}
+  button {
+    vertical-align: middle;
+  }
 
-.wrapper2 button:not(:first-child) {
-  margin-left: 12px;
+  button:not(:first-child) {
+    margin-left: 12px;
+  }
 }
 
 .wrapper3 {

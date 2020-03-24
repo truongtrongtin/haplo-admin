@@ -1,12 +1,12 @@
 import React from "react";
 
-import css from "./Company.module.css";
-import WelcomeText from "../../components/WelcomeText";
-import CurrentDate from "../../components/CurrentDate";
-import SectionName from "../../components/SectionName";
-import TableAction from "../../components/TableAction";
-import Table from "../../components/Table";
-import Pagination from "../../components/Pagination";
+import css from "./Company.module.scss";
+import WelcomeText from "components/WelcomeText";
+import CurrentDate from "components/CurrentDate";
+import SectionName from "components/SectionName";
+import TableAction from "components/TableAction";
+import Table from "components/Table";
+import Pagination from "components/Pagination";
 
 function Company() {
   return (

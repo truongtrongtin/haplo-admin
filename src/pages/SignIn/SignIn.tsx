@@ -10,12 +10,12 @@ import {
   IconButton,
   Checkbox,
   FormControlLabel,
-  Link
+  Link,
 } from "@material-ui/core";
-import StyledButton from "../../components/StyledButton";
+import StyledButton from "components/StyledButton";
 
-import { ReactComponent as EyeIcon } from "../../assets/icons/eye.svg";
-import { ReactComponent as EyeOffIcon } from "../../assets/icons/eyeoff.svg";
+import { ReactComponent as EyeIcon } from "assets/icons/eye.svg";
+import { ReactComponent as EyeOffIcon } from "assets/icons/eyeoff.svg";
 import css from "./SignIn.module.css";
 
 function SignInForm() {
@@ -29,16 +29,14 @@ function SignInForm() {
     <Formik
       initialValues={{
         email: "",
-        password: ""
+        password: "",
       }}
       validationSchema={Yup.object({
         email: Yup.string()
           .label("Email")
           .email("Invalid email address")
           .required(),
-        password: Yup.string()
-          .label("Password")
-          .required()
+        password: Yup.string().label("Password").required(),
       })}
       onSubmit={({ email, password }) => {
         dispatch(signIn({ email, password }));
@@ -78,7 +76,7 @@ function SignInForm() {
                     {isShowPassword ? <EyeIcon /> : <EyeOffIcon />}
                   </IconButton>
                 </InputAdornment>
-              )
+              ),
             }}
           />
           <div className={css.rememberWrapper}>

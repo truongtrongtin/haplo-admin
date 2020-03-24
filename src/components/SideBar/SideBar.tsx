@@ -3,27 +3,27 @@ import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
 
 import css from "./SideBar.module.css";
-import { ReactComponent as LogoIcon } from "../../assets/icons/logo-northgate.svg";
-import { ReactComponent as GreyAddIcon } from "../../assets/icons/add-grey.svg";
-import { ReactComponent as WhiteAddIcon } from "../../assets/icons/add-white.svg";
-import { ReactComponent as GreyAmenitiesIcon } from "../../assets/icons/amenities-grey.svg";
-import { ReactComponent as WhiteAmenitiesIcon } from "../../assets/icons/amenities-white.svg";
-import { ReactComponent as GreyCompaniesIcon } from "../../assets/icons/companies-grey.svg";
-import { ReactComponent as WhiteCompaniesIcon } from "../../assets/icons/companies-white.svg";
-import { ReactComponent as GreyEmployeesIcon } from "../../assets/icons/employees-grey.svg";
-import { ReactComponent as WhiteEmployeesIcon } from "../../assets/icons/employees-white.svg";
-import { ReactComponent as GreyReportsIcon } from "../../assets/icons/reports-grey.svg";
-import { ReactComponent as WhiteReportsIcon } from "../../assets/icons/reports-white.svg";
-import { ReactComponent as GreySearchIcon } from "../../assets/icons/search-grey.svg";
-import { ReactComponent as WhiteSearchIcon } from "../../assets/icons/search-white.svg";
-import { ReactComponent as GreyTCIcon } from "../../assets/icons/t-c-grey.svg";
-import { ReactComponent as WhiteTCIcon } from "../../assets/icons/t-c-white.svg";
-import { ReactComponent as GreySettingsIcon } from "../../assets/icons/settings-grey.svg";
-import { ReactComponent as WhiteSettingsIcon } from "../../assets/icons/settings-white.svg";
-import sidebarAvatar from "../../assets/images/avatar-sidebar.png";
+import { ReactComponent as LogoIcon } from "assets/icons/logo-northgate.svg";
+import { ReactComponent as GreyAddIcon } from "assets/icons/add-grey.svg";
+import { ReactComponent as WhiteAddIcon } from "assets/icons/add-white.svg";
+import { ReactComponent as GreyAmenitiesIcon } from "assets/icons/amenities-grey.svg";
+import { ReactComponent as WhiteAmenitiesIcon } from "assets/icons/amenities-white.svg";
+import { ReactComponent as GreyCompaniesIcon } from "assets/icons/companies-grey.svg";
+import { ReactComponent as WhiteCompaniesIcon } from "assets/icons/companies-white.svg";
+import { ReactComponent as GreyEmployeesIcon } from "assets/icons/employees-grey.svg";
+import { ReactComponent as WhiteEmployeesIcon } from "assets/icons/employees-white.svg";
+import { ReactComponent as GreyReportsIcon } from "assets/icons/reports-grey.svg";
+import { ReactComponent as WhiteReportsIcon } from "assets/icons/reports-white.svg";
+import { ReactComponent as GreySearchIcon } from "assets/icons/search-grey.svg";
+import { ReactComponent as WhiteSearchIcon } from "assets/icons/search-white.svg";
+import { ReactComponent as GreyTCIcon } from "assets/icons/t-c-grey.svg";
+import { ReactComponent as WhiteTCIcon } from "assets/icons/t-c-white.svg";
+import { ReactComponent as GreySettingsIcon } from "assets/icons/settings-grey.svg";
+import { ReactComponent as WhiteSettingsIcon } from "assets/icons/settings-white.svg";
+import sidebarAvatar from "assets/images/avatar-sidebar.png";
 import ClickAwayListener from "@material-ui/core/ClickAwayListener";
-import HoverIcon from "../HoverIcon";
-import { showBackdrop, hideBackdrop } from "../Backdrop/backdropSlice";
+import HoverIcon from "components/HoverIcon";
+import { showBackdrop, hideBackdrop } from "components/Backdrop/backdropSlice";
 const ModalAdd = React.lazy(() => import("./ModalAdd"));
 const ModalSearch = React.lazy(() => import("./ModalSearch"));
 const ModalProfile = React.lazy(() => import("./ModalProfile"));
@@ -33,7 +33,7 @@ function SideBar() {
   const [modalState, setModalState] = useState<React.ComponentState>({
     modalAdd: false,
     modalSearch: false,
-    modalProfile: false
+    modalProfile: false,
   });
 
   function toggleModal(modalName: string) {

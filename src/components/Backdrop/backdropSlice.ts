@@ -6,13 +6,13 @@ const backdropSlice = createSlice({
   name: "backdrop",
   initialState: { open: false } as backdropState,
   reducers: {
-    showBackdrop(state) {
+    showBackdrop: state => {
       state.open = true;
     },
-    hideBackdrop(state) {
+    hideBackdrop: state => {
       state.open = false;
-    }
-  }
+    },
+  },
 });
 
 export const { showBackdrop, hideBackdrop } = backdropSlice.actions;

@@ -3,9 +3,9 @@ import { useHistory } from "react-router-dom";
 import { Dialog } from "@material-ui/core";
 
 import css from "./ModalProfile.module.css";
-import avatarProfile from "../../assets/images/avatar-profile.png";
-import StyledButton from "../../components/StyledButton";
-import { ReactComponent as CloseGreyIcon } from "../../assets/icons/close-grey.svg";
+import avatarProfile from "assets/images/avatar-profile.png";
+import StyledButton from "components/StyledButton";
+import { ReactComponent as CloseGreyIcon } from "assets/icons/close-grey.svg";
 
 type ModalProfileProps = {
   closeModal(): void;

@@ -2,8 +2,8 @@ import React from "react";
 import { Route } from "react-router-dom";
 
 import css from "./WelcomeRoute.module.css";
-import girl from "../../assets/images/girl.jpg";
-import logo from "../../assets/images/logo-northgate.png";
+import girl from "assets/images/girl.jpg";
+import logo from "assets/images/logo-northgate.png";
 
 type WelcomeLayoutProps = { children: React.ReactNode };
 

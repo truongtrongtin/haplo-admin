@@ -1,11 +1,11 @@
 import React from "react";
 import css from "./RecentActivity.module.css";
 
-import { ReactComponent as RecentAmenitiesIcon } from "../../assets/icons/recentactivities-amenities.svg";
-import { ReactComponent as UserIcon } from "../../assets/icons/user.svg";
-import { ReactComponent as FilterIcon } from "../../assets/icons/filter.svg";
-import { ReactComponent as FilterHoverIcon } from "../../assets/icons/filter-on-hover.svg";
-import HoverIcon from "../HoverIcon";
+import { ReactComponent as RecentAmenitiesIcon } from "assets/icons/recentactivities-amenities.svg";
+import { ReactComponent as UserIcon } from "assets/icons/user.svg";
+import { ReactComponent as FilterIcon } from "assets/icons/filter.svg";
+import { ReactComponent as FilterHoverIcon } from "assets/icons/filter-on-hover.svg";
+import HoverIcon from "components/HoverIcon";
 
 function RecentActivity() {
   return (

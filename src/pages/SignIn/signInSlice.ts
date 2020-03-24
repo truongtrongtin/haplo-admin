@@ -1,9 +1,9 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { AppThunk } from "../../app/store";
-import { showToast } from "../../components/Toast/toastSlice";
+import { AppThunk } from "app/store";
+import { showToast } from "components/Toast/toastSlice";
 
-import history from "../../app/history";
-import { signInAPI, AuthInfo } from "../../api";
+import history from "app/history";
+import { signInAPI, AuthInfo } from "api";
 
 type AuthState = {
   signingIn: boolean;
@@ -14,33 +14,33 @@ type AuthState = {
 const initialState: AuthState = {
   signingIn: false,
   hasAccessToken: Boolean(localStorage.getItem("accessToken")),
-  signInError: ""
+  signInError: "",
 };
 
 const auth = createSlice({
   name: "auth",
   initialState,
   reducers: {
-    signInBegin(state) {
+    signInBegin: state => {
       state.signingIn = true;
     },
-    signInSuccess(state) {
+    signInSuccess: state => {
       state.hasAccessToken = true;
     },
-    signInFailure(state, action: PayloadAction<string>) {
+    signInFailure: (state, action: PayloadAction<string>) => {
       state.signInError = action.payload;
     },
-    signOut(state) {
+    signOut: state => {
       state.hasAccessToken = false;
-    }
-  }
+    },
+  },
 });
 
 export const {
   signInBegin,
   signInSuccess,
   signInFailure,
-  signOut
+  signOut,
 } = auth.actions;
 export default auth.reducer;
 

@@ -8,7 +8,7 @@ aside.sidebar {
 }
 
 .logo {
-  border-bottom: 1px solid rgba(255, 255, 255, .2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   padding: 10px 0 23.5px;
   display: flex;
   justify-content: center;
@@ -21,7 +21,7 @@ aside.sidebar {
 
 ul.list {
   padding: 7.5px 0;
-  border-bottom: 1px solid rgba(255, 255, 255, .2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 ul.list > li {
@@ -34,7 +34,7 @@ ul.list > li {
 }
 
 .active::before {
-  content: '';
+  content: "";
   height: 40px;
   width: 8px;
   border-radius: 3px;

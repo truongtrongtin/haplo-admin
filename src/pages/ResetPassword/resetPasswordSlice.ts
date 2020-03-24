@@ -1,9 +1,9 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { AppThunk } from "../../app/store";
-import { showToast } from "../../components/Toast/toastSlice";
+import { AppThunk } from "app/store";
+import { showToast } from "components/Toast/toastSlice";
 
-import history from "../../app/history";
-import { resetPasswordAPI } from "../../api";
+import history from "app/history";
+import { resetPasswordAPI } from "api";
 
 type AuthState = {
   loading: boolean;
@@ -14,29 +14,29 @@ type AuthState = {
 const initialState: AuthState = {
   loading: false,
   success: false,
-  error: ""
+  error: "",
 };
 
 const resetSlice = createSlice({
   name: "reset",
   initialState,
   reducers: {
-    resetPasswordBegin(state) {
+    resetPasswordBegin: state => {
       state.loading = true;
     },
-    resetPasswordSuccess(state) {
+    resetPasswordSuccess: state => {
       state.success = true;
     },
-    resetPasswordFailure(state, action: PayloadAction<string>) {
+    resetPasswordFailure: (state, action: PayloadAction<string>) => {
       state.error = action.payload;
-    }
-  }
+    },
+  },
 });
 
 export const {
   resetPasswordBegin,
   resetPasswordSuccess,
-  resetPasswordFailure
+  resetPasswordFailure,
 } = resetSlice.actions;
 export default resetSlice.reducer;
 

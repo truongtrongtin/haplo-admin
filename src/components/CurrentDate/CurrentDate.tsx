@@ -5,7 +5,7 @@ import css from "./CurrentDate.module.css";
 const currentDate = new Date().toLocaleString("en-US", {
   month: "short",
   day: "numeric",
-  year: "numeric"
+  year: "numeric",
 });
 
 function CurrentDate() {

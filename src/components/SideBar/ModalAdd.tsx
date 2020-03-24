@@ -1,9 +1,9 @@
 import React from "react";
 
 import css from "./ModalAdd.module.css";
-import { ReactComponent as BlackCompaniesIcon } from "../../assets/icons/companies-black.svg";
-import { ReactComponent as BlackEmployeesIcon } from "../../assets/icons/employees-black.svg";
-import { ReactComponent as BlackAmenitiesIcon } from "../../assets/icons/amenities-black.svg";
+import { ReactComponent as BlackCompaniesIcon } from "assets/icons/companies-black.svg";
+import { ReactComponent as BlackEmployeesIcon } from "assets/icons/employees-black.svg";
+import { ReactComponent as BlackAmenitiesIcon } from "assets/icons/amenities-black.svg";
 
 type ModalAddProps = {
   closeModal(): void;
